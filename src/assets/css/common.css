@@ -1,0 +1,30 @@
+body,div,h1,h2,ul,li,span,p,input,button,a {
+    margin: 0;
+    padding: 0;
+}
+.fixClear {
+    zoom: 1;
+}
+.fixClear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+.fixClearIe8 {
+    height: 0;
+    clear: both;
+}
+.table {
+    display: table;
+}
+ul {
+    list-style: none;
+}
+input {
+    outline: none;
+    line-height: 0;
+}
