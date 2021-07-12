@@ -56,6 +56,7 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 0.08rem .25rem .23rem ;
+  background: #fff;
 }
 .list li {
   width: 1.2rem;
@@ -65,7 +66,7 @@ export default {
   text-align: center;
 }
 .list p img {
-  width: .24rem;
-  height: .24rem;
+  width: .48rem;
+  height: .48rem;
 }
 </style>
