@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="list">
-      <li v-for="(item,idx) in navData" :key="idx">
+      <li v-for="(item,idx) in navData" :key="idx" :class="{thisclass:idx == current}">
         <p><img :src="item.imgUrl" alt=""></p>
         <p>{{item.text}}</p>
       </li>
@@ -18,6 +18,7 @@ export default {
   },
   data() {
     return {
+      current:0,
       navData:[
         {
           text:'首页',

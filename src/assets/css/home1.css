@@ -1,3 +1,7 @@
+img {
+  width: 100%;
+  display: block;
+}
 .navList {
   position: fixed;
   bottom: 0;
@@ -22,10 +26,6 @@
   width: 0.8rem;
   height: 0.8rem;
 }
-.home img {
-  display: block;
-  width: 100%;
-}
 .searchBox {
   font-size: 0;
 }
@@ -33,20 +33,12 @@
   width: 0.64rem;
   height: 0.64rem;
 }
-.notice img {
-  display: block;
-  width: 100%;
-}
-.banner img {
-  display: block;
-  width: 100%;
-}
 .fn ul {
   display: flex;
   justify-content: space-around;
 }
 .fn ul li {
-  padding: 0.16rem 0 0.19rem;
+  padding: 0.32rem 0 0.38rem;
 }
 .fn ul li p {
   font-size: 0.12rem;
@@ -56,15 +48,12 @@
   width: 0.88rem;
   height: 0.88rem;
 }
-.fn ul li p:first-child img {
-  width: 100%;
-}
 .line {
   background: #f5f5f5;
   height: 0.12rem;
 }
 .roof {
-  background: url("../../assets/img/home/store.png") center center no-repeat;
+  background: url("../../assets/img/home/home1/store.png") center center no-repeat;
   background-size: cover;
   height: 2.46rem;
   position: relative;
@@ -91,7 +80,7 @@
   margin-right: 0.08rem;
 }
 .roof .go {
-  background: url("../../assets/img/home/go.png") center center no-repeat;
+  background: url("../../assets/img/home/home1/go.png") center center no-repeat;
   background-size: cover;
   border: none;
   height: 0.4rem;
@@ -99,6 +88,7 @@
 }
 .roofWall {
   background: #c30d23;
+  padding-bottom: .13rem;
   /* height: 2.55rem; */
 }
 .storeList {
@@ -185,4 +175,225 @@
 .tea .teaText .price {
 	font-size: 10px;
   color: #c30d23;
+}
+.noticeBox {
+  width: 93.6%;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 8px;
+  border: 2px solid #FFEBB9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0;
+}
+.noticeBox .noticeBoxL .noticeTitle {
+  color: #C30D23;
+  font-size: 12px;
+  margin-left: .08rem;
+}
+.noticeBox .noticeBoxL .line2 {
+  display: inline-block;
+  height: .12rem;
+  margin-left: 4px;
+  border: 1px solid #333333;
+}
+.noticeBox .noticeBoxL .noticeContent {
+  font-size: 12px;
+  color: #333333;
+}
+.noticeBoxR {
+  width: .24rem;
+  height: .24rem;
+  margin-right: .08rem;
+}
+.noticeBoxR img {
+  width: 100%;
+  display: block;
+}
+.chooseBox {
+  font-size: 0;
+  padding: .64rem 0;
+  position: relative;
+}
+.chooseBox .line3 img {
+  width: 100%;
+  display: block;
+}
+.chooseBox .ballSmall {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.325rem;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+}
+.chooseBox .ballSmall .ball {
+  width: .63rem;
+  height: .65rem;
+  background: url('../../assets/img/home/home1/title_image_word\ bg@2x\(1\).png') center center no-repeat;
+  background-size: cover;
+  display: inline-block;
+  color: black;
+  color: #fff;
+  font-size: 15px;
+  line-height: .65rem;
+  text-align: center;
+}
+.chooseBox .ballSmall .ball1 {
+  left: -0.12rem;
+  position: relative;
+}
+.chooseBox .ballSmall .ball2 {
+  left: -0.24rem;
+  position: relative;
+}
+.chooseBox .ballSmall .ball3 {
+  left: -0.36rem;
+  position: relative;
+}
+.chooseBanner {
+  width: 7rem;
+  height: 2.32rem;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: .24rem;
+}
+.chooseBanner img {
+  width: 100%;
+  display: block;
+}
+.chooseBanner .transparent {
+  position: absolute;
+  bottom: 0.24rem;
+  width: 7rem;
+  height: .64rem;
+  background: #C89593;
+  opacity: 0.7;
+}
+.transContent {
+  position: absolute;
+  bottom: .24rem;
+  width: 7rem;
+  height: .64rem;
+  font-size: 0;
+  line-height: .64rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.transContent>div {
+ font-size: 0;
+ height: .64rem;
+}
+.transContent .content {
+  font-size: 12px;
+  color: #FFFCFC;
+  margin-left: 0.08rem;
+}
+.transContent .fire {
+  width: .4rem;
+  display: inline-block;
+  margin-left: .19rem;
+}
+.transContent .more {
+  width: .24rem;
+  height: .24rem;
+  margin-right: .1rem;
+}
+.chooseGoods {
+  margin-left: .24rem;
+  /* text-align: center; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.chooseGoods ul {
+  /* overflow: hidden; */
+  width: 9rem;
+
+}
+.chooseGoods ul li {
+  float: left;
+  margin-right: .16rem;
+  text-align: center;
+  margin-bottom: .32rem;
+}
+.chooseGoods ul li .goodsImg {
+  width: 1.80rem;
+  height: 1.80rem;
+  margin-bottom: .16rem;
+}
+.chooseGoods ul li .goodsTitle {
+  font-size: 10px;
+  color: #333333;
+  margin-bottom: .12rem;
+}
+.chooseGoods ul li .price {
+  font-size: 12px;
+  color: #C30D23;
+  padding-bottom: .16rem;
+}
+.recommend ul {
+  margin-left: .24rem;
+}
+.recommend ul li {
+  float: left;
+  padding-bottom: .18rem;
+  margin-right: .11rem;
+}
+.recommend .recommendImage {
+  width: 3.4rem;
+  height: 3rem;
+  margin-bottom: .16rem;
+}
+.recommend .recommendTitle {
+  font-size: 12px;
+  color: #333333;
+  margin-bottom: .14rem;
+  margin-left: .16rem;
+}
+.recommend .introduce {
+  font-size: 10px;
+  color: #C30D23;
+  margin-bottom: .14rem;
+  margin-left: .24rem;
+}
+.recommend .priceBox {
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .11rem;
+}
+.recommend .price {
+  font-size: 16px;
+  color: #C30D23;
+  margin-left: .16rem;
+}
+.recommend .sales {
+  font-size: 10px;
+  color: #999999;
+  margin-right: .12rem;
+}
+.recommend .rankList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommend .rank {
+  font-size: 10px;
+  color: #333333;
+}
+.recommend .crown {
+  width: .24rem;
+  height: .24rem;
+  display: inline-block;
+  margin-left: .12rem;
+  margin-right: .12rem;
+}
+.recommend .more {
+  width: .24rem;
+  height: .24rem;
+  display: inline-block;
+  margin-right: .18rem;
 }
