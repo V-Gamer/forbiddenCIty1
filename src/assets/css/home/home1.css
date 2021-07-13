@@ -53,7 +53,7 @@ img {
   height: 0.12rem;
 }
 .roof {
-  background: url("../../assets/img/home/home1/store.png") center center no-repeat;
+  background: url("../../img/home/home1/store.png") center center no-repeat;
   background-size: cover;
   height: 2.46rem;
   position: relative;
@@ -80,7 +80,7 @@ img {
   margin-right: 0.08rem;
 }
 .roof .go {
-  background: url("../../assets/img/home/home1/go.png") center center no-repeat;
+  background: url("../../img/home/home1/go.png") center center no-repeat;
   background-size: cover;
   border: none;
   height: 0.4rem;
@@ -231,7 +231,7 @@ img {
 .chooseBox .ballSmall .ball {
   width: .63rem;
   height: .65rem;
-  background: url('../../assets/img/home/home1/title_image_word\ bg@2x\(1\).png') center center no-repeat;
+  background: url('../../img/home/home1/title_image_word\ bg@2x\(1\).png') center center no-repeat;
   background-size: cover;
   display: inline-block;
   color: black;
@@ -309,7 +309,7 @@ img {
 }
 .chooseGoods ul {
   /* overflow: hidden; */
-  width: 9rem;
+  width: 8.2rem;
 
 }
 .chooseGoods ul li {

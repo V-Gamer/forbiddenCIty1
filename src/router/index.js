@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import home from '../view/home/index.vue'
 import newGoods from '../view/home/newGoods'
+import inspiration from '../view/find/inspiration'
 
 Vue.use(Router)
 
@@ -12,13 +13,18 @@ export default new Router({
     routes:[
         {
             path:'/home',
-            name:'首页',
+            name:'home',
             component:home
         },
         {
             path:'/newGoods',
-            name:'故宫新品',
+            name:'newGoods',
             component:newGoods
+        },
+        {
+            path:'/inspiration',
+            name:'inspiration',
+            component:inspiration
         },
         // {
         //     path:'',

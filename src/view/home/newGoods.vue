@@ -44,12 +44,12 @@
       </div>
     </div>
 
-    <navList class="navList1"></navList>
+    <!-- <navList class="navList1"></navList> -->
   </div>
 </template>
 
 <script>
-import navList from "../../components/nav";
+// import navList from "../../components/nav";
 import swiper from "@/components/swiper";
 
 export default {
@@ -95,12 +95,12 @@ export default {
 		};
   },
   components: {
-    navList,
+    // navList,
     swiper,
   },
 };
 </script>
 
-<style src="../../assets/css/home-newGoods.css" scoped></style>
+<style src="../../assets/css/home/home-newGoods.css" scoped></style>
 <style scoped>
 </style>

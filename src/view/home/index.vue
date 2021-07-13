@@ -259,13 +259,13 @@
         </ul>
       </div>
     </div>
-    <navList class="navList"></navList>
+    <!-- <navList class="navList"></navList> -->
   </div>
 </template>
 
 
 <script>
-import navList from "../../components/nav";
+// import navList from "../../components/nav";
 
 export default {
   name: "home",
@@ -274,10 +274,10 @@ export default {
     return {};
   },
   components: {
-    navList,
+    // navList,
   },
 };
 </script>
 
 
-<style src="../../assets/css/home1.css" scoped></style>
+<style src="../../assets/css/home/home1.css" scoped></style>
