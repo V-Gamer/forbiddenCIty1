@@ -3,6 +3,7 @@
     <div class="head">
       <div class="headBox">
         <slot name="headTitle" class="headTitle"></slot>
+        <slot name="back"></slot>
       </div>
     </div>
   </div>
@@ -11,7 +12,7 @@
 
 <script>
 export default {
-  name: "header",
+  name: "header1",
   props: {
     msg: String,
   },
@@ -29,15 +30,21 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
+  height: .88rem;
   z-index: 50;
 }
 .headBox {
-  padding: 0.52rem 1.48rem 0.09rem;
   position: relative;
+  z-index: 50;
+  height: .88rem;
 }
-.head .headTitle {
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
+.headBox>span {
+	display: inline-block;
+	width: .4rem;
+	height: .4rem;
+	position: absolute;
+	/* top: 0; */
+	bottom: .09rem;
+	left: .48rem;
 }
 </style>

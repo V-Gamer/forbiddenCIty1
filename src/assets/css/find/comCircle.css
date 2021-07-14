@@ -1,0 +1,64 @@
+img {
+  width: 100%;
+  display: block;
+}
+body {
+  background: #FAF8F8;
+}
+.head {
+  height: .88rem;
+}
+.headTitle {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0.09rem;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+  z-index: 70;
+}
+.contentBox {
+  display: flex;
+  margin: 0.2rem .4rem 0;
+  justify-content: space-around;
+}
+.siderbarL,.siderbarR {
+  width: 42.67%;
+}
+.siderbarL ul li,.siderbarR ul li {
+  margin-bottom: .32rem;
+  background: #FFFFFF;
+}
+.picture {
+  margin-bottom: .16rem;
+}
+.content {
+  font-size: 12px;
+  color: #333333;
+  margin-bottom: .28rem;
+}
+.other {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: .16rem;
+}
+.user {
+  font-size: 0;
+}
+.headImg {
+  width: .24rem;
+  height: .24rem;
+  display: inline-block;
+}
+.userName {
+  font-size: 10px;
+  color: #333333;
+}
+.address {
+  font-size: 10px;
+  color: #999999;
+}
+.navBox1 {
+  height: 1.19rem;
+  width: 100%;
+}

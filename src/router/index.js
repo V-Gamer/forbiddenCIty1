@@ -1,9 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+
+// ------------------------homeStrat-------------------------------
 import home from '../view/home/index.vue'
 import newGoods from '../view/home/newGoods'
+// ------------------------homeEnd-------------------------------
+
+// ------------------------findStart-------------------------------
+import comCircle from '../view/find/comCircle'
 import inspiration from '../view/find/inspiration'
+import jointly from '../view/find/jointly'
+import designer from '../view/find/designer'
+// ------------------------findEnd-------------------------------
+
+
+//-------------------------classificationStart-------------------
+import classification from '../view/classification/classification.vue'
+//-------------------------classificationEnd---------------------
 
 Vue.use(Router)
 
@@ -22,9 +36,29 @@ export default new Router({
             component:newGoods
         },
         {
+            path:'/comCircle',
+            name:'comCircle',
+            component:comCircle
+        },
+        {
             path:'/inspiration',
             name:'inspiration',
             component:inspiration
+        },
+        {
+            path:'/jointly',
+            name:'jointly',
+            component:jointly
+        },
+        {
+            path:'/designer',
+            name:'designer',
+            component:designer
+        },
+        {
+            path:'/classification',
+            name:'classification',
+            component:classification
         },
         // {
         //     path:'',

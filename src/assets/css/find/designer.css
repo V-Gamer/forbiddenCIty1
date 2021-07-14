@@ -1,0 +1,49 @@
+img {
+  width: 100%;
+  display: block;
+}
+body {
+  background: #FAF8F8;
+}
+.head {
+  height: .88rem;
+}
+.headTitle {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0.09rem;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+  z-index: 70;
+}
+.navBox1 {
+  height: 1.19rem;
+  width: 100%;
+}
+.designerModel .pic {
+  width: 100%;
+}
+.textContent {
+  padding: .4rem;
+}
+.contentTitle {
+  font-size: 0;
+  margin-bottom: .14rem;
+}
+.contentTitle>span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  margin-right: 4px;
+  height: .28rem;
+  line-height: .28rem;
+  display: inline-block;
+} 
+.textContent .line {
+  border-left: 1px solid #333333;
+}
+.textContent .content {
+  font-size: 12px;
+  color: #999999;
+}

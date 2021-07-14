@@ -1,0 +1,77 @@
+img {
+  width: 100%;
+  display: block;
+}
+body {
+  background: #FAF8F8;
+}
+.head {
+  height: .88rem;
+}
+.headTitle {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0.09rem;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+  z-index: 70;
+}
+.event {
+  background: #fff;
+  width: 93.6%;
+  margin: 0 auto;
+}
+.eventBox {
+  border-bottom: 2px solid #E6E6E6;
+  margin: .26rem;
+}
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: .22rem;
+}
+.introduce {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: .12rem;
+}
+.fixClear {
+  display: flex;
+  justify-content: space-around;
+}
+.fixClear li:last-child {
+  margin-right: 0;
+}
+.show ul li .showPic {
+  width: 1.96rem;
+  height: 1.96rem;
+  margin-bottom: .16rem;
+}
+.comment {
+  font-size: 10px;
+  color: #333333;
+  margin-bottom: .24rem;
+  text-align: center;
+}
+.more {
+  display: flex;
+  justify-content: space-between;
+  margin:0 .26rem;
+  align-items: center;
+  padding-bottom: .24rem;
+}
+.more .detail {
+  font-size: 10px;
+  color: #333333;
+}
+.more .icon_more {
+  width: .4rem;
+  height: .4rem;
+  display: inline-block;
+}
+.navBox1 {
+  height: 1.19rem;
+  width: 100%;
+}

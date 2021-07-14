@@ -20,8 +20,5 @@ export default {
   position: fixed;
   bottom: 0;
   width: 100%;
-  left: 50%;
-  transform: translate(-50%);
-  overflow: hidden;
 }
 </style>
