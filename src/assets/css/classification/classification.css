@@ -14,3 +14,54 @@ img {
   transform: translate(-50%,0);
   z-index: 70;
 }
+.search {
+  width: 3.15rem;
+  height: .32rem;
+  padding-left: .53rem;
+  background: #FFFFFF;
+  opacity: 0.25;
+  border: none;
+  border-radius: 6px;
+}
+.searchPic {
+  display: inline-block;
+  width: .28rem;
+  height: .28rem;
+  position: absolute;
+  left: .11rem;
+  bottom: 3px;
+}
+.bigBox {
+  display: flex;
+}
+.navBox {
+  font-size: 0;
+  padding-top: 7px;
+  width: 1.64rem;
+  background: #F7F7F7;
+}
+.navBox ul li {
+  padding: .175rem 0;
+}
+.navBox .navName {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 .4rem;
+}
+.thisNav {
+  background: #fff;
+}
+.current {
+  color: #C30D23;
+  position: relative;
+}
+.current::before {
+  position: absolute;
+  content: '';
+  left: -22px;
+  top: 0;
+  width: 3px;
+  height: .32rem;
+  background: url('../../img/classification/line.png') center center no-repeat;
+  background-size: cover;
+}
