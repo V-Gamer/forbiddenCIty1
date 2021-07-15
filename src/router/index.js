@@ -21,9 +21,13 @@ import newPage from '../view/classification/new.vue'
 //-------------------------classificationEnd---------------------
 
 
-//-------------------------classificationEnd---------------------
+//-------------------------classificationStart---------------------
 import perIndex from '../view/personal/index.vue'
+//-------------------------classificationEnd---------------------
 
+//-------------------------classificationEnd---------------------
+import cart from '../view/cart/index.vue'
+//-------------------------classificationEnd---------------------
 
 Vue.use(Router)
 
@@ -75,6 +79,11 @@ export default new Router({
             path:'/perIndex',
             name:'perIndex',
             component:perIndex
+        },
+        {
+            path:'/cart',
+            name:'cart',
+            component:cart
         },
         // {
         //     path:'',

@@ -58,7 +58,7 @@ export default {
           // name:'home'
         },
       ],
-      nameList:['home','classification','comCircle','','perIndex']
+      nameList:['home','classification','comCircle','cart','perIndex']
     };
   },
   methods: {
