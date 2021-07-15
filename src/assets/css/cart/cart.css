@@ -4,6 +4,7 @@ img {
 }
 body {
   background: #faf8f8;
+  position: relative;
 }
 .head {
   height: .88rem;
@@ -21,11 +22,17 @@ body {
   height: 1.19rem;
   width: 100%;
 }
+.goodsList {
+  margin-bottom: .88rem;
+}
+.goodsList .store:first-child {
+  margin-top: .16rem;
+} 
 .goodsList .store {
   display: flex;
   align-items: center;
   font-size: 0;
-  margin: .16rem 0.56rem  .16rem .24rem;
+  margin: 0 0.16rem .16rem .24rem;
   padding: .16rem;
   background: #fff;
 }
@@ -50,6 +57,8 @@ body {
 .goodsDetail .goodsChoose {
   padding: 5px 8px;
   margin-bottom: .24rem;
+  display: flex;
+  align-items: center;
 }
 .goodsDetail .text {
   font-size: 12px;
@@ -83,18 +92,71 @@ body {
 }
 .priceBox .number>span {
   display: inline-block;
-} 
-.priceBox .number .minus {
+  text-align: center;
   width: .36rem;
   height: .36rem;
+  line-height: .36rem;
+  background: #F7F7F7;
+  margin-right: 4px;
+} 
+.priceBox .number .minus {
+  font-size: 11px;
+  color: #808080;
 }
 .priceBox .number .num {
   font-size: 12px;
   color: #C30D23;
-  /* height: .36rem;
-  line-height: .36rem; */
 }
 .priceBox .number .add {
-  width: .36rem;
-  height: .36rem;
+  font-size: 11px;
+  color: #808080;
+}
+.settlement {
+  position: fixed;
+  bottom: 1.19rem;
+  height: .88rem;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.allChoose .chooseAll {
+  font-size: 14px;
+  color: #333333;
+}
+.settlement .allChoose {
+  font-size: 0;
+}
+.settlement .allChoose .chooseBox {
+  margin-left: .5rem;
+}
+.settlement .allChoose .chooseAll {
+  margin-left: 16px;
+  padding-left: .4rem;
+}
+.totalBox {
+  display: flex;
+  font-size: 0;
+  align-items: center;
+}
+.totalBox .total {
+  margin-right: .32rem;
+}
+.totalBox .total .totalText {
+  font-size: 14px;
+}
+.totalBox .total .totalPrice {
+  font-size: 18px;
+  font-weight: bold;
+  color: #C30D23;
+}
+.totalBox .account {
+  width: 1.88rem;
+  font-size: 14px;
+  color: #FAFAFA;
+  background: #C30D23;
+  height: .88rem;
+  text-align: center;
+  line-height: .88rem;
 }
