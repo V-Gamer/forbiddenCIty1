@@ -78,7 +78,7 @@ export default {
   line-height: 0.96rem;
 }
 .current {
-  color: #c30d23;
+  color: #c30d23 !important;
   position: relative;
 }
 .current::after {

@@ -34,34 +34,32 @@ img {
 .bigBox {
   display: flex;
 }
-.navBox {
-  font-size: 0;
-  padding-top: 7px;
-  width: 1.64rem;
-  background: #F7F7F7;
+
+.content {
+  width: 5.38rem;
+  margin: 0 auto;
 }
-.navBox ul li {
-  padding: .175rem 0;
+.content .banner {
+  height: 2rem;
+  padding: .24rem 0 .42rem;
 }
-.navBox .navName {
-  font-size: 14px;
+.goodsList ul {
+  width: 3.7rem;
+  margin: 0 auto;
+}
+.goodsList ul li {
+  width: 1.6rem;
+  float: left;
+}
+.goodsList ul li:nth-child(odd) {
+  margin-right: .5rem;
+} 
+.goodsList ul li .goodsImg {
+  height: 1.6rem;
+  margin-bottom: .1rem;
+}
+.goodsList ul li .goodsName {
+  font-size: 16px;
   font-weight: bold;
-  margin: 0 .4rem;
-}
-.thisNav {
-  background: #fff;
-}
-.current {
-  color: #C30D23;
-  position: relative;
-}
-.current::before {
-  position: absolute;
-  content: '';
-  left: -22px;
-  top: 0;
-  width: 3px;
-  height: .32rem;
-  background: url('../../img/classification/line.png') center center no-repeat;
-  background-size: cover;
-}
+  text-align: center;
+} 

@@ -17,7 +17,13 @@ import designer from '../view/find/designer'
 
 //-------------------------classificationStart-------------------
 import classification from '../view/classification/classification.vue'
+import newPage from '../view/classification/new.vue'
 //-------------------------classificationEnd---------------------
+
+
+//-------------------------classificationEnd---------------------
+import perIndex from '../view/personal/index.vue'
+
 
 Vue.use(Router)
 
@@ -59,6 +65,16 @@ export default new Router({
             path:'/classification',
             name:'classification',
             component:classification
+        },
+        {
+            path:'/newPage',
+            name:'newPage',
+            component:newPage
+        },
+        {
+            path:'/perIndex',
+            name:'perIndex',
+            component:perIndex
         },
         // {
         //     path:'',

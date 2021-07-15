@@ -1,0 +1,175 @@
+img {
+  width: 100%;
+  display: block;
+}
+body {
+  background: #faf8f8;
+}
+.backgroundImg {
+  background: url('../../img/personal/bg.png') center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 4.76rem;
+  position: relative;
+}
+.userInfo {
+  width: 6.7rem;
+  /* height: 3.54rem; */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3.35rem;
+}
+.infoHead {
+  display: flex;
+  align-items: center;
+}
+.infoHead .headImg {
+  width: .92rem;
+  height: .92rem;
+  margin-right: .4rem;
+  margin-left: .16rem;
+}
+.infoHead .userName {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFCFC;
+}
+.infoHead .tips {
+  width: 1.16rem;
+  height: .44rem;
+}
+.infoData .num {
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFFCFC;
+}
+.infoData .name {
+  font-size: 12px;
+  color: #FFFCFC;
+}
+.infoMiddle .list {
+  padding:.4rem;
+  display: flex;
+  justify-content: space-around;
+	align-items: center;
+}
+.infoMiddle .fixClear li {
+  float: left;
+  margin-right: .68rem;
+	text-align: center;
+} 
+.infoMiddle .fixClear li:last-child {
+  margin-right: 0;
+} 
+.userInfo .setting {
+  position: absolute;
+  top: -.14rem;
+  right: .36rem;
+  width: .64rem;
+  height: .64rem;
+}
+.orderModdle {
+	/* margin-bottom: .2rem; */
+	margin: 0 .32rem .2rem;
+}
+.myOrder {
+  width: 93.6%;
+  background: #fff;
+	margin: 0 auto;
+	padding-top: .2rem;
+}
+.myOrderBox {
+  padding: .24rem 0;
+	/* margin: 0 .32rem; */
+	display: flex;
+	justify-content: space-between;
+	font-size: 0;
+	align-items: center;
+	border-bottom: 1px solid #F2F2F2;
+}
+.myOrderBox .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.showMore {
+	display: flex;
+	align-items: center;
+}
+.myOrderBox .all {
+  font-size: 12px;
+  color: #999999;
+}
+.myOrderBox .more {
+	width: .4rem;
+	height: .4rem;
+	display: inline-block;
+}
+.orderBox {
+	width: 93.6%;
+	margin: 0 auto;
+}
+.orderList,.serveList {
+	margin: 0 .32rem;
+	padding: .23rem 0;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.fixClear .pic {
+	width: .64rem;
+	height: .64rem;
+	margin-bottom: 2px;
+}
+.fixClear .text {
+  font-size: 10px;
+	text-align: center;
+}
+.navBox1 {
+	height: 1.19rem;
+  width: 100%;
+}
+.bannerBox {
+	width: 93.33%;
+	margin: 0 auto;
+}
+.serveList {
+	padding: .44rem .16rem 0;
+}
+.serveList .serve {
+	/* margin-right: .6rem; */
+	flex:  0 0 25%;
+	text-align: center;
+	margin-bottom: .2rem;
+}
+.serveList li .pic {
+	width: .56rem;
+	height: .56rem;
+	margin: 0 auto;
+}
+.serveList li .text {
+  font-size: 10px;
+}
+.guesst {
+	width: 93.6%;
+	margin: 0 auto;
+}
+.guesstTitle {
+	font-size: 0;
+	text-align: center;
+	padding-top: .4rem;
+	/* margin: 0 auto; */
+}
+.guesstTitle>span{
+	display: inline-block;
+}
+.lineL,.lineR {
+	width: 1.55rem;
+	height: .22rem;
+}
+.guesstTitle .title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #C30D23;
+}

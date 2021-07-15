@@ -11,6 +11,7 @@
     <div class="head"></div>
     <div class="bigBox">
       <classNav @click="getInfo"></classNav>
+
       <div class="content">
         <div class="banner">
           <img src="../../assets/img/classification/banner.png" alt="" />
@@ -33,46 +34,35 @@ import header1 from "../../components/head/index.vue";
 import classNav from "../../components/class/classNav.vue";
 
 export default {
-  name: "classification",
+  name: "newPage",
   components: {
     header1,
     classNav,
   },
   data() {
     return {
+      current: 0,
       idx:0,
       goodsList: [
         {
           img: require("../../assets/img/classification/goods.png"),
-          text: "口红",
+          text: "新品",
         },
         {
           img: require("../../assets/img/classification/goods.png"),
-          text: "眉笔",
+          text: "新品",
         },
         {
           img: require("../../assets/img/classification/goods.png"),
-          text: "气垫",
+          text: "新品",
         },
         {
           img: require("../../assets/img/classification/goods.png"),
-          text: "眼影",
+          text: "新品",
         },
         {
           img: require("../../assets/img/classification/goods.png"),
-          text: "护肤",
-        },
-        {
-          img: require("../../assets/img/classification/goods.png"),
-          text: "腮红",
-        },
-        {
-          img: require("../../assets/img/classification/goods.png"),
-          text: "洁面",
-        },
-        {
-          img: require("../../assets/img/classification/goods.png"),
-          text: "定妆",
+          text: "新品",
         },
       ],
     };
@@ -83,9 +73,9 @@ export default {
   },
   methods: {
     getInfo() {
-      var idx = this.$route.params.thisIdx
-      console.log(idx)
-    }
+      var idx = this.$route.params.thisIdx;
+      console.log(idx);
+    },
   },
 };
 </script>
