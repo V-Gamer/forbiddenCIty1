@@ -10,7 +10,7 @@
     </header1>
     <div class="head"></div>
     <div class="bigBox">
-      <classNav @click="getInfo"></classNav>
+      <classNav @click="getInfo" v-bind:thisIdx="thisIdx"></classNav>
       <div class="content">
         <div class="banner">
           <img src="../../assets/img/classification/banner.png" alt="" />
@@ -25,18 +25,22 @@
         </div>
       </div>
     </div>
+    <navList class="navList"></navList>
   </div>
 </template>
 
 <script>
 import header1 from "../../components/head/index.vue";
 import classNav from "../../components/class/classNav.vue";
+import navList from "../../components/nav";
 
 export default {
   name: "classification",
   components: {
     header1,
     classNav,
+    navList,
+
   },
   data() {
     return {
@@ -75,6 +79,7 @@ export default {
           text: "定妆",
         },
       ],
+      thisIdx:0
     };
   },
   created() {
@@ -83,11 +88,15 @@ export default {
   },
   methods: {
     getInfo() {
-      var idx = this.$route.params.thisIdx
-      console.log(idx)
+      console.log(this.thisIdx)
+      this.thisIdx = this.$route.params.thisIdx
     }
   },
 };
 </script>
 
 <style src="../../assets/css/classification/classification.css" scoped></style>
+
+<style scoped>
+
+</style>

@@ -1,10 +1,9 @@
 <template>
   <div>
     <ul class="list">
-      <li v-for="(item, idx) in navData" :key="idx" @click="choose(idx)">
-        <!-- <p><img :src="item.imgUrl" alt="" /></p> -->
+      <li v-for="(item, idx) in navData" :key="idx" @click="choose(item, idx)">
         <p>
-          <img :src="item.flag == true ? item.imgUrl1 : item.imgUrl2" alt="" />
+          <img :src="isSelect === item.name ? item.imgUrl2 : item.imgUrl1" alt="item.text" />
         </p>
         <p>{{ item.text }}</p>
       </li>
@@ -21,64 +20,71 @@ export default {
   },
   data() {
     return {
+      isSelect: "home",
       navData: [
         {
           flag: false,
           text: "首页",
           imgUrl1: require("../../assets/img/nav/indexOff.png"),
           imgUrl2: require("../../assets/img/nav/indexOn.png"),
-          // name:'home'
+          name:'home'
         },
         {
           flag: true,
           text: "分类",
           imgUrl1: require("../../assets/img/nav/classifyOff.png"),
           imgUrl2: require("../../assets/img/nav/classifyOn.png"),
-          // name:'home'
+          name:'classification'
         },
         {
           flag: true,
           text: "发现",
           imgUrl1: require("../../assets/img/nav/findOff.png"),
           imgUrl2: require("../../assets/img/nav/findOn.png"),
-          // name:'home'
+          name:'comCircle'
         },
         {
           flag: true,
           text: "购物车",
           imgUrl1: require("../../assets/img/nav/purchaseCarOff.png"),
           imgUrl2: require("../../assets/img/nav/purchaseCarOn.png"),
-          // name:'home'
+          name:'cart'
         },
         {
           flag: true,
           text: "个人中心",
           imgUrl1: require("../../assets/img/nav/personalOff.png"),
           imgUrl2: require("../../assets/img/nav/personalOn.png"),
-          // name:'home'
+          name:'perIndex'
         },
       ],
-      nameList:['home','classification','comCircle','cart','perIndex']
+      nameList: ["home", "classification", "comCircle", "cart", "perIndex"],
     };
   },
+  mounted() {
+    this.isSelect = this.$route.name;
+  },
   methods: {
-    choose(idx) {
-      for (var i = 0; i < this.navData.length; i++) {
-        this.navData[i].flag = true;
+    choose(item, idx) {
+      switch (item.text) {
+        case (item.text = "首页"):
+          this.$router.push("/home");
+          break;
+        case (item.text = "分类"):
+          this.$router.push("/classification");
+          break;
+        case (item.text = "发现"):
+          this.$router.push("/comCircle");
+          break;
+        case (item.text = "购物车"):
+          this.$router.push("/cart");
+          break;
+        case (item.text = "个人中心"):
+          this.$router.push("/perIndex");
+          break;
       }
-      this.navData[idx].flag = !this.navData[idx].flag;
-      if (idx == 0) {
-        this.$router.push({ name: this.nameList[0] });
-      } else if (idx == 1) {
-        this.$router.push({ name: this.nameList[1] });
-      } else if (idx == 2) {
-        this.$router.push({ name: this.nameList[2] });
-      } else if (idx == 3) {
-        this.$router.push({ name: this.nameList[3] });
-      } else if (idx == 4) {
-        this.$router.push({ name: this.nameList[4] });
-      }
-      // this.$emit("homeNavPage",idx);
+      this.isSelect = this.$route.name;
+      console.log(idx);
     },
   },
   components: {},

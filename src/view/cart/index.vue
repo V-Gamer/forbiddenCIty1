@@ -64,22 +64,25 @@
       <div class="totalBox">
         <div class="total">
           <span class="totalText">合计：</span>
-          <span class="totalPrice">￥1127</span>
+          <span class="totalPrice">￥{{ this.totalPrice }}</span>
         </div>
         <div class="account">结算</div>
       </div>
     </div>
+    <navList class="navList"></navList>
   </div>
 </template>
 
 <script>
 import header1 from "../../components/head/index.vue";
+import navList from "../../components/nav";
 
 export default {
   name: "cart",
   data() {
     return {
       idx: "",
+      totalPrice: 0,
       goodsData: [
         {
           name: "故宫口红•枫叶红",
@@ -141,9 +144,14 @@ export default {
   },
   components: {
     header1,
+    navList,
+
   },
   methods: {
     add(idx) {
+      if (this.goodsData[idx].checked) {
+        this.totalPrice = this.totalPrice - this.goodsData[idx].price;
+      }
       var num = this.goodsData[idx].num;
       var avgPrice = this.goodsData[idx].price;
       if (num > 1) {
@@ -151,19 +159,30 @@ export default {
       }
       this.goodsData[idx].num = this.goodsData[idx].num + 1;
       this.goodsData[idx].price = avgPrice * this.goodsData[idx].num;
+      if (this.goodsData[idx].checked) {
+        this.totalPrice = this.totalPrice + this.goodsData[idx].price;
+      }
     },
     minus(idx) {
       var num;
       if (this.goodsData[idx].num > 1) {
+        // if (this.goodsData[idx].checked) {
+        //   this.totalPrice = this.totalPrice - this.goodsData[idx].price;
+        // }
+        this.totalPrice = this.totalPrice - this.goodsData[idx].price;
         num = this.goodsData[idx].num;
         this.goodsData[idx].num = this.goodsData[idx].num - 1;
         this.goodsData[idx].price =
           (this.goodsData[idx].price / num) * this.goodsData[idx].num;
+        if (this.goodsData[idx].checked) {
+          this.totalPrice = this.goodsData[idx].price+this.totalPrice;
+        }
       }
     },
     choosed(idx) {
       let num = 0;
       let index = this.goodsData.length;
+      let record1 = 0;
       this.goodsData[idx].checked = !this.goodsData[idx].checked;
       this.idx = idx;
       for (var i = 0; i < this.goodsData.length; i++) {
@@ -176,6 +195,13 @@ export default {
       } else if (num < index && this.allChecked) {
         this.allChecked = !this.allChecked;
       }
+      this.totalPrice = 0;
+      for (var j = 0; j < this.goodsData.length; j++) {
+        if (this.goodsData[j].checked == true) {
+          record1 = j; // 记录goodsData里checked属性为真的下标
+          this.totalPrice += parseInt(this.goodsData[record1].price);
+        }
+      }
     },
     checked() {
       this.allChecked = !this.allChecked;
@@ -187,6 +213,14 @@ export default {
         for (var j = 0; j < this.goodsData.length; j++) {
           this.goodsData[j].checked = false;
         }
+      }
+      this.totalPrice = 0
+      if (this.allChecked) {
+        for (var x = 0; x < this.goodsData.length; x++) {
+          this.totalPrice += parseInt(this.goodsData[x].price);
+        }
+      } else {
+        this.totalPrice = 0;
       }
     },
   },

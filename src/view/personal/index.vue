@@ -82,13 +82,19 @@
       </p>
     </div>
     <div class="navBox1"></div>
+    <navList class="navList"></navList>
   </div>
 </template>
 
 <script>
+import navList from "../../components/nav";
+
 export default {
   name: "personal",
-  components: {},
+  components: {
+    navList,
+
+  },
   data() {
     return {
       infoData: [
@@ -167,3 +173,11 @@ export default {
 </script>
 
 <style src="../../assets/css/personal/index.css" scoped></style>
+
+<style scoped>
+.navList {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+</style>

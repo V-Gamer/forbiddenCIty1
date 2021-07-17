@@ -33,57 +33,61 @@ Vue.use(Router)
 
 
 export default new Router({
-    mode:'history',
-    routes:[
+    mode: 'history',
+    routes: [
         {
-            path:'/home',
-            name:'home',
-            component:home
+            path: '/',
+            redirect: '/home'
         },
         {
-            path:'/newGoods',
-            name:'newGoods',
-            component:newGoods
+            path: '/home',
+            name: 'home',
+            component: home
         },
         {
-            path:'/comCircle',
-            name:'comCircle',
-            component:comCircle
+            path: '/newGoods',
+            name: 'newGoods',
+            component: newGoods
         },
         {
-            path:'/inspiration',
-            name:'inspiration',
-            component:inspiration
+            path: '/comCircle',
+            name: 'comCircle',
+            component: comCircle
         },
         {
-            path:'/jointly',
-            name:'jointly',
-            component:jointly
+            path: '/inspiration',
+            name: 'inspiration',
+            component: inspiration
         },
         {
-            path:'/designer',
-            name:'designer',
-            component:designer
+            path: '/jointly',
+            name: 'jointly',
+            component: jointly
         },
         {
-            path:'/classification',
-            name:'classification',
-            component:classification
+            path: '/designer',
+            name: 'designer',
+            component: designer
         },
         {
-            path:'/newPage',
-            name:'newPage',
-            component:newPage
+            path: '/classification',
+            name: 'classification',
+            component: classification
         },
         {
-            path:'/perIndex',
-            name:'perIndex',
-            component:perIndex
+            path: '/newPage',
+            name: 'newPage',
+            component: newPage
         },
         {
-            path:'/cart',
-            name:'cart',
-            component:cart
+            path: '/perIndex',
+            name: 'perIndex',
+            component: perIndex
+        },
+        {
+            path: '/cart',
+            name: 'cart',
+            component: cart
         },
         // {
         //     path:'',

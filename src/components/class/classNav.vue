@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="navBox">
+    <div class="navBox" id="navBox">
       <ul>
         <li
           v-for="(item, idx) in navData"
           :key="idx"
           class="nav"
+          :id="'nav' + (idx + 1)"
           @click="choose(item, idx)"
           :class="{ thisNav: idx == current }"
         >
@@ -39,11 +40,17 @@
 <script>
 export default {
   name: "classNav",
-  props: ["idx"],
+  props: {
+    thisIdx: {
+      type: Number,
+      required: true,
+    },
+  },
   components: {},
   data() {
     return {
       current: 0,
+      thisName: "classification",
       navData: [
         {
           name: "上新馆",
@@ -88,20 +95,55 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.isSelect = this.$route.name;
+  },
   methods: {
     choose(item, idx) {
-      this.current = idx;
-      if (idx % 2 != 0) {
-        // this.$router.push({path:`/${item.path}`});
-        this.$router.push({ name: "newPage", params: { thisIdx: idx } });
-      } else if (idx % 2 == 0) {
-        this.$router.push({ name: "classification", params: { thisIdx: idx } });
-      }
-      //  else if (idx == 2) {
-      //   // this.$router.push({ name: "jointly" });
-      // } else if (idx == 3) {
-      //   // this.$router.push({ name: "designer" });
+      this.thisName = item.name;
+      console.log(this.thisName);
+      console.log(idx);
+
+      // console.log(navList)
+      // if (idx % 2 != 0) {
+      //   this.$router.push({ name: "newPage", params: { thisIdx: idx } });
+      // } else if (idx % 2 == 0) {
+      //   this.$router.push({ name: "classification", params: { thisIdx: idx } });
       // }
+      switch (item.name) {
+        case (item.name = "上新馆"):
+          this.$router.push("/newPage");
+          break;
+        case (item.name = "出版馆"):
+          this.$router.push("/classification");
+          break;
+        case (item.name = "美妆馆"):
+          this.$router.push("/newPage");
+          break;
+        case (item.name = "文房馆"):
+          this.$router.push("/classification");
+          break;
+        case (item.name = "香氛馆"):
+          this.$router.push("/newPage");
+          break;
+        case (item.name = "首饰馆"):
+          this.$router.push("/classification");
+          break;
+        case (item.name = "铜器馆"):
+          this.$router.push("/newPage");
+          break;
+        case (item.name = "陶瓷馆"):
+          this.$router.push("/classification");
+          break;
+        case (item.name = "丝绸馆"):
+          this.$router.push("/newPage");
+          break;
+        case (item.name = "家居馆"):
+          this.$router.push("/classification");
+          break;
+      }
+      this.isSelect = this.$route.name;
+      // console.log(this.$props)
     },
   },
 };

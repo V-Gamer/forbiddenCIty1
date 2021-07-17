@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <navList class="navList"></navList>
+    <!-- <navList class="navList"></navList> -->
   </div>
 </template>
 
 <script>
-import navList from './components/nav/index.vue'
+// import navList from './components/nav/index.vue'
 export default {
   name: 'App',
   components: {
-    navList,
+    // navList,
   }
 }
 </script>

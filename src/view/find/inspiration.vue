@@ -74,12 +74,14 @@
       </div>
       <div class="navBox1"></div>
     </div>
+    <navList class="navList"></navList>
   </div>
 </template>
 
 <script>
 import header1 from "../../components/head/index.vue";
 import findNav from "../../components/head/findNav.vue";
+import navList from "../../components/nav";
 
 export default {
   name: "inspiration",
@@ -139,7 +141,8 @@ export default {
   // },
   components: {
     header1,
-    findNav
+    findNav,
+    navList,
   },
 };
 </script>
