@@ -28,6 +28,41 @@ img {
 }
 .searchBox {
   font-size: 0;
+  position: relative;
+}
+.searchBox .textBox {
+  background: #FFFFFF;
+  opacity: 0.16;
+  border: none;
+  height: .64rem;
+  width: 5.6rem;
+  border-radius: 6px;
+  z-index: 30;
+}
+.searchContent {
+  position: absolute;
+  z-index: 50;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+}
+.searchContent img {
+  width: .4rem;
+  height: .4rem;
+  display: block;
+}
+.searchContent .searchText {
+  /* background: #FFFFFF; */
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  opacity: .16;
+  margin-left: .24rem;
+}
+.dispear {
+  display: none;
 }
 .notice {
   width: 0.64rem;

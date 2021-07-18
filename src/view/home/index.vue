@@ -8,7 +8,11 @@
             <img src="../../assets/img/home/home1/home.png" alt="" />
           </div>
           <div class="searchBox">
-            <input type="text" placeholder="故宫口红" />
+            <input type="text" class="textBox" v-model="message" @click="disapear" />
+            <div class="searchContent" id="searchContent">
+              <img src="../../assets/img/home/home1/search.png" alt="">
+              <span class="searchText">故宫口红</span>
+            </div>
           </div>
           <div class="notice">
             <img src="../../assets/img/home/home1/notice.png" alt="" />
@@ -287,6 +291,7 @@ import {getCookie} from "../../assets/js/cookie.js";
 export default {
   name: "home",
   props: {},
+  message:'',
   data() {
     return {};
   },
@@ -302,6 +307,12 @@ export default {
   components: {
     navList,
   },
+  methods:{
+    disapear() {
+      let searchContent = document.getElementById('searchContent')
+        searchContent.classList.add('dispear');
+    }
+  }
 };
 </script>
 
