@@ -43,15 +43,15 @@
       </div>
       <div class="orderBox">
         <ul class="fixClear orderList">
-          <li v-for="(item,index) in orderData" :key="index">
-            <p class="pic"><img :src="item.pic" alt=""></p>
-            <p class="text">{{item.text}}</p>
+          <li v-for="(item, index) in orderData" :key="index">
+            <p class="pic"><img :src="item.pic" alt="" /></p>
+            <p class="text">{{ item.text }}</p>
           </li>
         </ul>
       </div>
     </div>
     <div class="bannerBox">
-      <img src="../../assets/img/personal/banner.png" alt="">
+      <img src="../../assets/img/personal/banner.png" alt="" />
     </div>
     <div class="orderModdle">
       <div class="myOrder">
@@ -67,18 +67,22 @@
       </div>
       <div class="serveBox">
         <ul class="fixClear serveList">
-          <li class="serve" v-for="(item,index) in serveData" :key="index">
-            <p class="pic"><img :src="item.img" alt=""></p>
-            <p class="text">{{item.text}}</p>
+          <li class="serve" v-for="(item, index) in serveData" :key="index">
+            <p class="pic"><img :src="item.img" alt="" /></p>
+            <p class="text">{{ item.text }}</p>
           </li>
         </ul>
       </div>
     </div>
     <div class="guesst">
       <p class="guesstTitle">
-        <span class="lineL"><img src="../../assets/img/personal/lineL.png" alt=""></span>
+        <span class="lineL"
+          ><img src="../../assets/img/personal/lineL.png" alt=""
+        /></span>
         <span class="title">猜你喜欢</span>
-        <span class="lineR"><img src="../../assets/img/personal/lineR.png" alt=""></span>
+        <span class="lineR"
+          ><img src="../../assets/img/personal/lineR.png" alt=""
+        /></span>
       </p>
     </div>
     <div class="navBox1"></div>
@@ -88,12 +92,12 @@
 
 <script>
 import navList from "../../components/nav";
+import { getCookie } from "../../assets/js/cookie.js";
 
 export default {
   name: "personal",
   components: {
     navList,
-
   },
   data() {
     return {
@@ -115,59 +119,67 @@ export default {
           name: "我的浏览",
         },
       ],
-      orderData:[
+      orderData: [
         {
-          pic:require('../../assets/img/personal/paying.png'),
-          text:'待付款'
+          pic: require("../../assets/img/personal/paying.png"),
+          text: "待付款",
         },
         {
-          pic:require('../../assets/img/personal/recived.png'),
-          text:'待收货'
+          pic: require("../../assets/img/personal/recived.png"),
+          text: "待收货",
         },
         {
-          pic:require('../../assets/img/personal/comment.png'),
-          text:'待评价'
+          pic: require("../../assets/img/personal/comment.png"),
+          text: "待评价",
         },
         {
-          pic:require('../../assets/img/personal/afterSale.png'),
-          text:'售后/评价'
+          pic: require("../../assets/img/personal/afterSale.png"),
+          text: "售后/评价",
         },
       ],
-      serveData:[
+      serveData: [
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
         {
-          img:require('../../assets/img/personal/address.png'),
-          text:'收货地址'
+          img: require("../../assets/img/personal/address.png"),
+          text: "收货地址",
         },
-      ]
+      ],
     };
+  },
+  mounted() {
+    let username = getCookie("username");
+    this.name = username;
+    /*如果cookie不存在，则跳转到登录页*/
+    if (username == "") {
+      this.$router.push("/");
+    }
   },
 };
 </script>

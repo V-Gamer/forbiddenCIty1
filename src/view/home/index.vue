@@ -80,7 +80,10 @@
                   </li>
                   <li>
                     <p class="goods1">
-                      <img src="../../assets/img/home/home1/goods1.png" alt="" />
+                      <img
+                        src="../../assets/img/home/home1/goods1.png"
+                        alt=""
+                      />
                     </p>
                     <p class="price">￥199.9</p>
                   </li>
@@ -112,19 +115,28 @@
                   </li>
                   <li>
                     <p class="goods1">
-                      <img src="../../assets/img/home/home1/goods1.png" alt="" />
+                      <img
+                        src="../../assets/img/home/home1/goods1.png"
+                        alt=""
+                      />
                     </p>
                     <p class="price">￥199.9</p>
                   </li>
                   <li>
                     <p class="goods1">
-                      <img src="../../assets/img/home/home1/goods1.png" alt="" />
+                      <img
+                        src="../../assets/img/home/home1/goods1.png"
+                        alt=""
+                      />
                     </p>
                     <p class="price">￥199.9</p>
                   </li>
                   <li>
                     <p class="goods1">
-                      <img src="../../assets/img/home/home1/goods1.png" alt="" />
+                      <img
+                        src="../../assets/img/home/home1/goods1.png"
+                        alt=""
+                      />
                     </p>
                     <p class="price">￥199.9</p>
                   </li>
@@ -250,10 +262,14 @@
             </p>
             <div class="rankList">
               <div class="rank">
-                <span class="crown"><img src="../../assets/img/home/home1/crown.png" alt=""></span>
+                <span class="crown"
+                  ><img src="../../assets/img/home/home1/crown.png" alt=""
+                /></span>
                 <span>故宫首饰排行榜第一</span>
               </div>
-              <span class="more"><img src="../../assets/img/home/home1/arrow.png" alt=""></span>
+              <span class="more"
+                ><img src="../../assets/img/home/home1/arrow.png" alt=""
+              /></span>
             </div>
           </li>
         </ul>
@@ -266,12 +282,22 @@
 
 <script>
 import navList from "../../components/nav";
+import {getCookie} from "../../assets/js/cookie.js";
 
 export default {
   name: "home",
   props: {},
   data() {
     return {};
+  },
+  mounted() {
+    /*页面挂载时获取保存的cookie值*/
+    let username = getCookie("username");
+    this.name = username;
+    /*如果cookie不存在，则跳转到登录页*/
+    if (username == "") {
+      this.$router.push("/");
+    }
   },
   components: {
     navList,

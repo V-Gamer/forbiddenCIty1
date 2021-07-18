@@ -76,6 +76,9 @@
 <script>
 import header1 from "../../components/head/index.vue";
 import navList from "../../components/nav";
+import {getCookie} from "../../assets/js/cookie.js";
+
+// import {getCookie} from '../../assets/js/cookie.js'
 
 export default {
   name: "cart",
@@ -133,15 +136,24 @@ export default {
       return JSON.parse(JSON.stringify(this.goodsData));
     },
   },
-  watch: {
-    newGoodsData: {
-      handler(newChecked, oldChecked) {
-        console.log("new", newChecked);
-        console.log("old", oldChecked);
-      },
-      deep: true,
-    },
+   mounted() {
+    /*页面挂载时获取保存的cookie值*/
+    let username = getCookie("username");
+    this.name = username;
+    /*如果cookie不存在，则跳转到登录页*/
+    if (username == "") {
+      this.$router.push("/");
+    }
   },
+  // watch: {
+  //   newGoodsData: {
+  //     handler(newChecked, oldChecked) {
+  //       console.log("new", newChecked);
+  //       console.log("old", oldChecked);
+  //     },
+  //     deep: true,
+  //   },
+  // },
   components: {
     header1,
     navList,
